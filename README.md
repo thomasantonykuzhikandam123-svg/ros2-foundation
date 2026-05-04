@@ -102,5 +102,29 @@ source install/setup.bash
 # Run
 ros2 run my_robot_pkg node_name
 
-## Built as part of
+## URDF — Robot Description
+
+### my_robot2.urdf
+A 4-wheeled mobile robot with a lidar sensor built from scratch using URDF.
+
+What it contains:
+- base_link — main robot body (box shape)
+- 4 wheels — left front, left back, right front, right back (cylinders)
+- lidar — sensor on top (cylinder)
+- All links connected via joints to base_link
+
+Concepts learned:
+- URDF link and joint structure
+- Visual geometry — box and cylinder shapes
+- Material colours in URDF
+- Fixed joints (lidar) vs continuous joints (wheels)
+- TF tree — every link must have one parent except root
+- Visualising robot in RViz using robot_state_publisher
+
+How to visualise:
+ros2 launch urdf_tutorial display.launch.py model:=/home/thomas/my_robot2.urdf
+
+Built by extending the tutorial — added 4 wheels instead of 2 by myself
+
+## Built as part of skill development
 RMIT Masters in Robotics and Mechatronics — May 2026
